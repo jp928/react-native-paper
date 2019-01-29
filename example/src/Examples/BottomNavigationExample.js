@@ -1,7 +1,14 @@
 /* @flow */
 
 import * as React from 'react';
-import { ScrollView, View, Image, Dimensions, StyleSheet } from 'react-native';
+import {
+  ScrollView,
+  View,
+  Image,
+  Dimensions,
+  StyleSheet,
+  Platform,
+} from 'react-native';
 import { BottomNavigation } from 'react-native-paper';
 
 type State = {
@@ -11,6 +18,7 @@ type State = {
     title: string,
     icon: string,
     color: string,
+    badge?: boolean,
   }>,
 };
 
@@ -30,7 +38,7 @@ const PhotoGallery = ({ route }) => {
   );
 };
 
-export default class ButtomNavigationExample extends React.Component<
+export default class BottomNavigationExample extends React.Component<
   {},
   State
 > {
@@ -45,6 +53,7 @@ export default class ButtomNavigationExample extends React.Component<
         title: 'Library',
         icon: 'inbox',
         color: '#2962ff',
+        badge: true,
       },
       {
         key: 'favorites',
@@ -78,16 +87,33 @@ export default class ButtomNavigationExample extends React.Component<
 }
 
 const styles = StyleSheet.create({
-  content: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    padding: 4,
-  },
-  item: {
-    height: Dimensions.get('window').width / 2,
-    width: '50%',
-    padding: 4,
-  },
+  ...Platform.select({
+    web: {
+      content: {
+        display: 'grid',
+        gridTemplateColumns: 'repeat(auto-fill, minmax(150px, 1fr))',
+        gridRowGap: '8px',
+        gridColumnGap: '8px',
+        padding: 8,
+      },
+      item: {
+        width: '100%',
+        height: 150,
+      },
+    },
+    default: {
+      content: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        padding: 4,
+      },
+      item: {
+        height: Dimensions.get('window').width / 2,
+        width: '50%',
+        padding: 4,
+      },
+    },
+  }),
   photo: {
     flex: 1,
     resizeMode: 'cover',
