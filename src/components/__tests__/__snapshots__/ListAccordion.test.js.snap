@@ -14,10 +14,13 @@ exports[`renders expanded accordion 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Array [
-        Object {
-          "padding": 8,
-        },
-        undefined,
+        false,
+        Array [
+          Object {
+            "padding": 8,
+          },
+          undefined,
+        ],
       ]
     }
   >
@@ -25,6 +28,7 @@ exports[`renders expanded accordion 1`] = `
       pointerEvents="none"
       style={
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
         }
       }
@@ -124,10 +128,13 @@ exports[`renders expanded accordion 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Array [
-        Object {
-          "padding": 8,
-        },
-        undefined,
+        false,
+        Array [
+          Object {
+            "padding": 8,
+          },
+          undefined,
+        ],
       ]
     }
   >
@@ -195,10 +202,13 @@ exports[`renders list accordion with children 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Array [
-        Object {
-          "padding": 8,
-        },
-        undefined,
+        false,
+        Array [
+          Object {
+            "padding": 8,
+          },
+          undefined,
+        ],
       ]
     }
   >
@@ -206,6 +216,7 @@ exports[`renders list accordion with children 1`] = `
       pointerEvents="none"
       style={
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
         }
       }
@@ -361,10 +372,13 @@ exports[`renders list accordion with left items 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Array [
-        Object {
-          "padding": 8,
-        },
-        undefined,
+        false,
+        Array [
+          Object {
+            "padding": 8,
+          },
+          undefined,
+        ],
       ]
     }
   >
@@ -372,6 +386,7 @@ exports[`renders list accordion with left items 1`] = `
       pointerEvents="none"
       style={
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
         }
       }
@@ -527,10 +542,13 @@ exports[`renders multiline list accordion 1`] = `
     onStartShouldSetResponder={[Function]}
     style={
       Array [
-        Object {
-          "padding": 8,
-        },
-        undefined,
+        false,
+        Array [
+          Object {
+            "padding": 8,
+          },
+          undefined,
+        ],
       ]
     }
   >
@@ -538,6 +556,7 @@ exports[`renders multiline list accordion 1`] = `
       pointerEvents="none"
       style={
         Object {
+          "alignItems": "center",
           "flexDirection": "row",
         }
       }

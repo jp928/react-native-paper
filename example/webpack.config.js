@@ -12,7 +12,7 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules[/\\](?!react-native-vector-icons)/,
+        exclude: /node_modules[/\\](?!react-native-vector-icons|react-native-safe-area-view)/,
         use: {
           loader: 'babel-loader',
           options: {
@@ -47,6 +47,10 @@ module.exports = {
       {
         test: /\.(jpg|png|woff|woff2|eot|ttf|svg)$/,
         loader: 'file-loader',
+      },
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
