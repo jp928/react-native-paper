@@ -65,6 +65,11 @@ type Props = React.ElementConfig<typeof Surface> & {|
    * @optional
    */
   theme: Theme,
+
+  /**
+   * @Brighte customized style
+   */
+  contentStyle?: any,
 |};
 
 type State = {
